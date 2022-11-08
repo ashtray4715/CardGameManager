@@ -26,7 +26,35 @@
         </activity>
 
         <activity
-            android:name=".common.ui.activity.BaseActivity"
+            android:name=".features.twentynine.TwentyNineActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.spades.SpadesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.ninecard.NineCardActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.hearts.HeartsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.hazari.HazariActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.bnr.RestoreActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.bnr.BackupActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.home.HomeActivity"
             android:exported="false" />
     </application>
 
