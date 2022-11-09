@@ -1,24 +1,27 @@
 package com.ashtray.card.game.manager.features.splash
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import com.ashtray.card.game.manager.R
-import com.ashtray.card.game.manager.features.hazari.HazariActivity
+
+import androidx.activity.viewModels
+import com.ashtray.card.game.manager.apps.MyApp
+
+import com.ashtray.card.game.manager.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
+
+    private val binding by lazy { ActivitySplashScreenBinding.inflate(layoutInflater) }
+
+    private val viewModel: SplashScreenViewModel by viewModels {
+        SplashScreenVMFactory((application as MyApp).repository)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
-
-        Handler(Looper.getMainLooper()).postDelayed(
-            {
-                startActivity(Intent(this, HazariActivity::class.java))
-            }, 3000
-        )
+        setContentView(binding.root)
+        binding.lifecycleOwner = this
+        binding.viewModel = viewModel
     }
 }
