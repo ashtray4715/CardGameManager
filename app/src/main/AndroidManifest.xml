@@ -57,6 +57,11 @@
         <activity
             android:name=".features.home.HomeActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".common.ui.activity.BaseActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
