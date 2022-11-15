@@ -55,7 +55,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".features.home.HomeActivity"
+            android:name=".features.home.HomeScreenFragment"
             android:exported="false" />
 
     </application>

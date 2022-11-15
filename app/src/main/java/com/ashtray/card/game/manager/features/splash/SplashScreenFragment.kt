@@ -2,6 +2,8 @@ package com.ashtray.card.game.manager.features.splash
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +22,8 @@ class SplashScreenFragment : BaseFragment() {
     private var _binding: FragmentSplashScreenBinding? = null
     private val binding get() = _binding!!
 
+    private val handler = Handler(Looper.getMainLooper())
+
     override val mTAG = "SplashScreenFragment"
 
     override fun onCreateView(
@@ -31,5 +35,21 @@ class SplashScreenFragment : BaseFragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handler.removeCallbacksAndMessages(null)
+        handler.postDelayed({
+            changeFragment(
+                fragment = MyApp.fragmentFactory.getSplashScreenFragment(),
+                transactionType = TransactionType.ADD_FRAGMENT
+            )
+        }, 2000)
+    }
+
+    override fun onPause() {
+        handler.removeCallbacksAndMessages(null)
+        super.onPause()
     }
 }
