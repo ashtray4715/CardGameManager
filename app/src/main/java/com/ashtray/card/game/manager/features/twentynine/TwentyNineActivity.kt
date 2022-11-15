@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
 import com.ashtray.card.game.manager.R
 import com.ashtray.card.game.manager.common.ui.activity.BaseActivity
 import com.ashtray.card.game.manager.features.hazari.HazariActivity
 import com.ashtray.card.game.manager.features.ninecard.NineCardActivity
 
-class TwentyNineActivity : BaseActivity() {
+class TwentyNineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_twenty_nine)

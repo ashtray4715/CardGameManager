@@ -3,6 +3,7 @@ package com.ashtray.card.game.manager.features.home
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.apps.MyApp
 import com.ashtray.card.game.manager.common.ui.activity.BaseActivity
@@ -15,12 +16,12 @@ import com.ashtray.card.game.manager.features.spades.SpadesActivity
 import com.ashtray.card.game.manager.features.twentynine.TwentyNineActivity
 import kotlinx.coroutines.launch
 
-class HomeActivity : BaseActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityHomeBinding.inflate(layoutInflater) }
 
     private val viewModel: HomeViewModel by viewModels {
-        HomeVMFactory((application as MyApp).repository)
+        HomeVMFactory(MyApp.repository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

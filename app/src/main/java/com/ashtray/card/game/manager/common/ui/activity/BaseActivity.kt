@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.R
+import com.ashtray.card.game.manager.apps.MyApp
 import com.ashtray.card.game.manager.apps.MyLog.i
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,7 +16,7 @@ import kotlinx.coroutines.withContext
 import com.ashtray.card.game.manager.common.ui.activity.BaseFragment.TransactionType
 import com.ashtray.card.game.manager.common.ui.helpers.SafeRunner
 
-abstract class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
+class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
@@ -31,6 +32,10 @@ abstract class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base_layout)
         onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
+        changeFragment(
+            fragment = MyApp.fragmentFactory.getSplashScreenFragment(),
+            transactionType = TransactionType.SINGLE_FRAGMENT
+        )
     }
 
     override fun changeFragment(fragment: BaseFragment, transactionType: TransactionType) {
