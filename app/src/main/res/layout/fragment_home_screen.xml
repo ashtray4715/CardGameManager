@@ -45,6 +45,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/status_view" />
 
             <include
+                android:id="@+id/game_history"
+                layout="@layout/fragment_home_game_history_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/main_options" />
+
+            <include
                 android:id="@+id/sub_options"
                 layout="@layout/fragment_home_other_options"
                 android:layout_width="0dp"
@@ -52,7 +61,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/main_options" />
+                app:layout_constraintTop_toBottomOf="@+id/game_history" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

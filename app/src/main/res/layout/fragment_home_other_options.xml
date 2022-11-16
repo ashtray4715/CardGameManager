@@ -8,11 +8,11 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/text_view_game_options"
+            android:id="@+id/text_view_more_options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Game options"
+            android:text="More options"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_view_game_options">
+            app:layout_constraintTop_toBottomOf="@+id/text_view_more_options">
 
             <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/backup"
