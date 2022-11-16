@@ -27,7 +27,7 @@ class HomeScreenFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeScreenBinding.inflate(layoutInflater)
+        _binding = FragmentHomeScreenBinding.inflate(layoutInflater, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
         return binding.root

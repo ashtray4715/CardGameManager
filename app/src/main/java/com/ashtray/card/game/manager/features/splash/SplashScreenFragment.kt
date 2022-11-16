@@ -42,8 +42,8 @@ class SplashScreenFragment : BaseFragment() {
         handler.removeCallbacksAndMessages(null)
         handler.postDelayed({
             changeFragment(
-                fragment = MyApp.fragmentFactory.getSplashScreenFragment(),
-                transactionType = TransactionType.ADD_FRAGMENT
+                fragment = MyApp.fragmentFactory.getHomeScreenFragment(),
+                transactionType = TransactionType.SINGLE_FRAGMENT
             )
         }, 2000)
     }
