@@ -23,7 +23,7 @@
 
             <include
                 android:id="@+id/status_view"
-                layout="@layout/activity_home_status_layout"
+                layout="@layout/fragment_home_status_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -35,7 +35,7 @@
 
             <include
                 android:id="@+id/main_options"
-                layout="@layout/activity_home_main_options"
+                layout="@layout/fragment_home_main_options"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -46,7 +46,7 @@
 
             <include
                 android:id="@+id/sub_options"
-                layout="@layout/activity_home_other_options"
+                layout="@layout/fragment_home_other_options"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
