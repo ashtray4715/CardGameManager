@@ -32,32 +32,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_view_game_options">
 
-            <include
+            <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/backup"
-                layout="@layout/activity_home_single_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                app:vmi_image="@drawable/test2"
+                app:vmi_text="Backup" />
 
-            <include
+            <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/restore"
-                layout="@layout/activity_home_single_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                app:vmi_image="@drawable/test2"
+                app:vmi_text="Restore" />
 
-            <include
+            <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/privacy_policy"
-                layout="@layout/activity_home_single_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                app:vmi_image="@drawable/test2"
+                app:vmi_text="Privacy policy" />
 
         </LinearLayout>
 
@@ -76,32 +79,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_options_first_row">
 
-            <include
+            <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/like_us"
-                layout="@layout/activity_home_single_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                app:vmi_image="@drawable/test2"
+                app:vmi_text="Like us" />
 
-            <include
+            <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/contact_us"
-                layout="@layout/activity_home_single_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                app:vmi_image="@drawable/test2"
+                app:vmi_text="Contact us" />
 
-            <include
+            <com.ashtray.card.game.manager.common.ui.custom.VerticalMenuItem
                 android:id="@+id/features"
-                layout="@layout/activity_home_single_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                app:vmi_image="@drawable/test2"
+                app:vmi_text="Features" />
 
         </LinearLayout>
 

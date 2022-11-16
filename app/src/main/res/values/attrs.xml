@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VerticalMenuItem">
+        <attr name="vmi_text" format="string" />
+        <attr name="vmi_image" format="reference" />
+    </declare-styleable>
+</resources>
