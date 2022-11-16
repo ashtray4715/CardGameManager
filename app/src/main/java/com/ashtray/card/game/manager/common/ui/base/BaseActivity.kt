@@ -1,4 +1,4 @@
-package com.ashtray.card.game.manager.common.ui.activity
+package com.ashtray.card.game.manager.common.ui.base
 
 import android.os.Bundle
 
@@ -13,8 +13,8 @@ import com.ashtray.card.game.manager.apps.MyLog.i
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.ashtray.card.game.manager.common.ui.activity.BaseFragment.TransactionType
-import com.ashtray.card.game.manager.common.ui.helpers.SafeRunner
+import com.ashtray.card.game.manager.common.ui.base.BaseFragment.TransactionType
+import com.ashtray.card.game.manager.common.helpers.SafeRunner
 
 class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
 

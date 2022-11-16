@@ -6,8 +6,6 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.ashtray.card.game.manager.R
-import com.ashtray.card.game.manager.common.ui.activity.BaseActivity
-import com.ashtray.card.game.manager.features.hazari.HazariActivity
 
 class BackupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

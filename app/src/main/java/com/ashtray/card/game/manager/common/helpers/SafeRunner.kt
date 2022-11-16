@@ -1,4 +1,4 @@
-package com.ashtray.card.game.manager.common.ui.helpers
+package com.ashtray.card.game.manager.common.helpers
 
 import com.ashtray.card.game.manager.apps.MyLog
 

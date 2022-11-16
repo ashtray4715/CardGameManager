@@ -1,4 +1,4 @@
-package com.ashtray.card.game.manager.common.ui.activity
+package com.ashtray.card.game.manager.common.ui.base
 
 import android.content.Context
 import android.view.inputmethod.InputMethodManager

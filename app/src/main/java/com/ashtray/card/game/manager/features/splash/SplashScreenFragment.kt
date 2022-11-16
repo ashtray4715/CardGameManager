@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.ashtray.card.game.manager.apps.MyApp
-import com.ashtray.card.game.manager.common.ui.activity.BaseFragment
+import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentSplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
