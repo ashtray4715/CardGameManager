@@ -16,7 +16,7 @@ class VerticalMenuItem(context: Context, attrs: AttributeSet) : RelativeLayout(c
     private var imageView: ImageView? = null
     private var textView: TextView? = null
 
-    private var backListener: OnClickListener? = null
+    private var clickListener: OnClickListener? = null
 
     init {
         setViewAndInitializeComponents(context)
@@ -24,12 +24,12 @@ class VerticalMenuItem(context: Context, attrs: AttributeSet) : RelativeLayout(c
         drawComponentsForTheFirstTime(context, attrs)
     }
 
-    fun setBackListener(backListener: OnClickListener?) {
-        this.backListener = backListener
+    fun setCustomClickListener(backListener: OnClickListener?) {
+        this.clickListener = backListener
     }
 
     private fun addHandlerAndListenersWhereNecessary() {
-        mainLayout?.setOnClickListener { view -> backListener?.onClick(view) }
+        mainLayout?.setOnClickListener { view -> clickListener?.onClick(view) }
     }
 
     private fun setViewAndInitializeComponents(context: Context) {

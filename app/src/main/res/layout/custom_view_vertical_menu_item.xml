@@ -4,7 +4,9 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_home_status_layout">
+    android:background="@drawable/bg_home_status_layout"
+    android:clickable="true"
+    android:focusable="true">
 
     <ImageView
         android:id="@+id/image_view"
@@ -14,6 +16,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:adjustViewBounds="true"
+        android:clickable="false"
+        android:focusable="false"
         android:scaleType="fitXY"
         android:src="@drawable/test2"
         tools:ignore="ContentDescription" />
@@ -25,6 +29,8 @@
         android:layout_below="@id/image_view"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
+        android:clickable="false"
+        android:focusable="false"
         android:gravity="center"
         android:singleLine="true"
         android:text="TextView"

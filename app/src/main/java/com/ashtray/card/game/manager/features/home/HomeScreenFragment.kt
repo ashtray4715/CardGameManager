@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.apps.MyApp
+import com.ashtray.card.game.manager.apps.MyViewModelFactory
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentHomeScreenBinding
 import kotlinx.coroutines.launch
@@ -17,7 +18,7 @@ class HomeScreenFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     private val viewModel: HomeViewModel by viewModels {
-        HomeVMFactory(MyApp.repository)
+        MyViewModelFactory(MyApp.repository)
     }
 
     override val mTAG = "HomeScreenFragment"
@@ -36,9 +37,12 @@ class HomeScreenFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.mainOptions.hazari.setOnClickListener {
+        binding.mainOptions.hazari.setCustomClickListener {
             lifecycleScope.launch {
-
+                changeFragment(
+                    fragment = MyApp.fragmentFactory.getAddHazariGameFragment(),
+                    transactionType = TransactionType.ADD_FRAGMENT
+                )
             }
         }
 
