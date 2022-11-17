@@ -4,7 +4,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_home_status_layout"
+    android:background="@drawable/bg_vertical_menu_item"
     android:clickable="true"
     android:focusable="true">
 
@@ -34,6 +34,8 @@
         android:gravity="center"
         android:singleLine="true"
         android:text="TextView"
+        android:textColor="@color/anti_fragment_background1"
+        android:textSize="18sp"
         tools:ignore="HardcodedText" />
 
 </RelativeLayout>

@@ -59,7 +59,7 @@ class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
         withContext(Dispatchers.Main) {
             SafeRunner {
                 supportFragmentManager.commit {
-                    //setCustomAnimations(R.anim.enter_right, R.anim.exit_left)
+                    setCustomAnimations(R.anim.enter_bottom, R.anim.exit_top)
                     add(R.id.fragment_container, fragment, fragment.mTAG)
                 }
             }
@@ -71,7 +71,7 @@ class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
         withContext(Dispatchers.Main) {
             SafeRunner {
                 supportFragmentManager.commit {
-                    //setCustomAnimations(R.anim.enter_left, R.anim.exit_right)
+                    setCustomAnimations(R.anim.enter_top, R.anim.exit_bottom)
                     remove(fragment)
                 }
             }

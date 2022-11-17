@@ -12,6 +12,11 @@
     <color name="fragment_background3">#CCCCCC</color>
     <color name="fragment_background4">#AAAAAA</color>
 
+    <color name="fragment_background1_ripple">#DDDDDD</color>
+    <color name="fragment_background2_ripple">#BEBEBE</color>
+    <color name="fragment_background3_ripple">#AAAAAA</color>
+    <color name="fragment_background4_ripple">#888888</color>
+
     <color name="anti_fragment_background1">#000000</color>
     <color name="anti_fragment_background2">#151515</color>
     <color name="anti_fragment_background3">#353535</color>
