@@ -4,4 +4,7 @@
         <attr name="vmi_text" format="string" />
         <attr name="vmi_image" format="reference" />
     </declare-styleable>
+    <declare-styleable name="SingleButtonItem">
+        <attr name="sbi_text" format="string" />
+    </declare-styleable>
 </resources>

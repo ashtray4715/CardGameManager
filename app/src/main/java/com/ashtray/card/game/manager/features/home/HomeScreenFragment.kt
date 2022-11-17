@@ -75,6 +75,8 @@ class HomeScreenFragment : BaseFragment() {
 
             }
         }
+
+
     }
 
     companion object {

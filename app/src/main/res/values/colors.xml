@@ -7,9 +7,9 @@
 
     <bool name="status_bar_text_color">true</bool>
 
-    <color name="fragment_background1">#FFFFFF</color>
-    <color name="fragment_background2">#DEDEDE</color>
-    <color name="fragment_background3">#CCCCCC</color>
+    <color name="fragment_background1">#F1F3FF</color>
+    <color name="fragment_background2">#FDFDFD</color>
+    <color name="fragment_background3">#E7E7E7</color>
     <color name="fragment_background4">#AAAAAA</color>
 
     <color name="fragment_background1_ripple">#DDDDDD</color>
@@ -21,6 +21,10 @@
     <color name="anti_fragment_background2">#151515</color>
     <color name="anti_fragment_background3">#353535</color>
     <color name="anti_fragment_background4">#454545</color>
+
+    <color name="button_background">#7972E6</color>
+    <color name="button_background_ripple">#6060D0</color>
+    <color name="button_text_color">#F7FAFA</color>
 
     <color name="error_color_deep">#F47174</color>
     <color name="error_color_light">#F47174</color>
