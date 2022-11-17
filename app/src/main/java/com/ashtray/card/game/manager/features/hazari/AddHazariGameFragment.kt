@@ -32,4 +32,9 @@ class AddHazariGameFragment : BaseFragment() {
         return binding.root
     }
 
+    override fun handleBackButtonPressed(): Boolean {
+        changeFragment(this, TransactionType.REMOVE_FRAGMENT)
+        return true
+    }
+
 }
