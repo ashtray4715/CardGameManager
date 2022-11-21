@@ -5,7 +5,10 @@
         <attr name="vmi_image" format="reference" />
     </declare-styleable>
     <declare-styleable name="FilledSingleButton">
-        <attr name="sbi_text" format="string" />
+        <attr name="fsb_text" format="string" />
+    </declare-styleable>
+    <declare-styleable name="StrokedSingleButton">
+        <attr name="ssb_text" format="string" />
     </declare-styleable>
     <declare-styleable name="BaseActionBar">
         <attr name="actionbar_title" format="string" />

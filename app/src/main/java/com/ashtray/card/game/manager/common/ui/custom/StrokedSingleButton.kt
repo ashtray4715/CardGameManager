@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.ashtray.card.game.manager.R
 import com.ashtray.card.game.manager.apps.MyLog
 
-class FilledSingleButton(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
+class StrokedSingleButton(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
 
     private var mainLayout: RelativeLayout? = null
     private var textView: TextView? = null
@@ -30,19 +30,19 @@ class FilledSingleButton(context: Context, attrs: AttributeSet) : RelativeLayout
     }
 
     private fun setViewAndInitializeComponents(context: Context) {
-        val cView = inflate(context, R.layout.custom_view_filled_single_button, this)
+        val cView = inflate(context, R.layout.custom_view_stroked_single_button, this)
         mainLayout = cView.findViewById(R.id.main_layout)
         textView = cView.findViewById(R.id.tv_title)
     }
 
     @SuppressLint("NonConstantResourceId")
     private fun drawComponentsForTheFirstTime(context: Context, attrs: AttributeSet) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.FilledSingleButton)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.StrokedSingleButton)
         try {
             val paramCount = typedArray.indexCount
             for (i in 0 until paramCount) {
                 when (val currentAttribute = typedArray.getIndex(i)) {
-                    R.styleable.FilledSingleButton_fsb_text -> {
+                    R.styleable.StrokedSingleButton_ssb_text -> {
                         textView?.text = typedArray.getString(currentAttribute)
                     }
                 }
@@ -56,6 +56,6 @@ class FilledSingleButton(context: Context, attrs: AttributeSet) : RelativeLayout
     }
 
     companion object {
-        private const val TAG = "FilledSingleButton"
+        private const val TAG = "StrokedSingleButton"
     }
 }

@@ -9,7 +9,7 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_filled_single_button"
+        android:background="@drawable/bg_stroked_single_button"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"

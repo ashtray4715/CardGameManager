@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                app:sbi_text="Game list"
+                app:fsb_text="Game list"
                 tools:ignore="HardcodedText" />
 
             <com.ashtray.card.game.manager.common.ui.custom.FilledSingleButton
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                app:sbi_text="Last game"
+                app:fsb_text="Last game"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
