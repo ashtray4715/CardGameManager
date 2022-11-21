@@ -30,7 +30,7 @@
             app:lottie_autoPlay="true"
             app:lottie_fileName="lotti_anim_loading.json"
             app:lottie_loop="true"
-            app:lottie_speed="1"
+            app:lottie_speed="1.5"
             tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

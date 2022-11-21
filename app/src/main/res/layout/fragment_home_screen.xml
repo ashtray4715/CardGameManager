@@ -31,44 +31,32 @@
             android:background="@color/fragment_background1"
             tools:ignore="UselessParent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 tools:context=".features.home.HomeScreenFragment">
 
                 <include
                     android:id="@+id/status_view"
                     layout="@layout/fragment_home_status_layout"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_margin="16dp" />
 
                 <include
                     android:id="@+id/main_options"
                     layout="@layout/fragment_home_main_options"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/status_view" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <include
                     android:id="@+id/sub_options"
                     layout="@layout/fragment_home_other_options"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/main_options" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
         </ScrollView>
 
