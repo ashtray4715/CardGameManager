@@ -16,9 +16,18 @@
         android:clickable="true"
         android:focusable="true">
 
+        <com.ashtray.card.game.manager.common.ui.base.BaseActionBar
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionbar_back_btn_visibility="false"
+            app:actionbar_menu_item_visibility="false"
+            app:actionbar_title="Joker" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@id/action_bar"
             android:background="@color/fragment_background1"
             tools:ignore="UselessParent">
 
@@ -44,7 +53,6 @@
                     layout="@layout/fragment_home_main_options"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"

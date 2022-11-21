@@ -7,4 +7,11 @@
     <declare-styleable name="SingleButtonItem">
         <attr name="sbi_text" format="string" />
     </declare-styleable>
+    <declare-styleable name="BaseActionBar">
+        <attr name="actionbar_title" format="string" />
+        <attr name="actionbar_back_btn_visibility" format="boolean" />
+        <attr name="actionbar_back_btn_icon" format="reference" />
+        <attr name="actionbar_menu_item_icon" format="reference" />
+        <attr name="actionbar_menu_item_visibility" format="boolean" />
+    </declare-styleable>
 </resources>
