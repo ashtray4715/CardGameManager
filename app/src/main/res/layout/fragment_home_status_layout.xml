@@ -9,30 +9,30 @@
         android:background="@drawable/bg_home_status_layout">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_total_game_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="TextView"
-            android:textColor="#000000"
-            android:textSize="10sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText,SmallSp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="TextView"
+            android:text="Total game - 20"
             android:textColor="#000000"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_last_game_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Last played - Hazari"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_game_count"
             tools:ignore="HardcodedText" />
 
         <View
@@ -42,10 +42,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="#AAAAAA"
+            android:background="@color/fragment_background3"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_last_game_type" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -62,21 +63,21 @@
             app:layout_constraintTop_toBottomOf="@+id/view">
 
             <com.ashtray.card.game.manager.common.ui.custom.SingleButtonItem
-                android:id="@+id/tv_like_us"
+                android:id="@+id/game_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                app:sbi_text="Like US"
+                app:sbi_text="Game list"
                 tools:ignore="HardcodedText" />
 
             <com.ashtray.card.game.manager.common.ui.custom.SingleButtonItem
-                android:id="@+id/tv_contact_us"
+                android:id="@+id/last_game"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                app:sbi_text="Contact us"
+                app:sbi_text="Last game"
                 tools:ignore="HardcodedText" />
 
         </LinearLayout>
