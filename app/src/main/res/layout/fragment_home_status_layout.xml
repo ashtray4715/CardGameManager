@@ -62,7 +62,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view">
 
-            <com.ashtray.card.game.manager.common.ui.custom.SingleButtonItem
+            <com.ashtray.card.game.manager.common.ui.custom.FilledSingleButton
                 android:id="@+id/game_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
                 app:sbi_text="Game list"
                 tools:ignore="HardcodedText" />
 
-            <com.ashtray.card.game.manager.common.ui.custom.SingleButtonItem
+            <com.ashtray.card.game.manager.common.ui.custom.FilledSingleButton
                 android:id="@+id/last_game"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

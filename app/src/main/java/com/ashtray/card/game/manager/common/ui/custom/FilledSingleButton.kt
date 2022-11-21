@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.ashtray.card.game.manager.R
 import com.ashtray.card.game.manager.apps.MyLog
 
-class SingleButtonItem(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
+class FilledSingleButton(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
 
     private var mainLayout: RelativeLayout? = null
     private var textView: TextView? = null
@@ -30,19 +30,19 @@ class SingleButtonItem(context: Context, attrs: AttributeSet) : RelativeLayout(c
     }
 
     private fun setViewAndInitializeComponents(context: Context) {
-        val cView = inflate(context, R.layout.custom_view_single_button_item, this)
+        val cView = inflate(context, R.layout.custom_view_filled_single_button, this)
         mainLayout = cView.findViewById(R.id.main_layout)
         textView = cView.findViewById(R.id.tv_title)
     }
 
     @SuppressLint("NonConstantResourceId")
     private fun drawComponentsForTheFirstTime(context: Context, attrs: AttributeSet) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SingleButtonItem)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.FilledSingleButton)
         try {
             val paramCount = typedArray.indexCount
             for (i in 0 until paramCount) {
                 when (val currentAttribute = typedArray.getIndex(i)) {
-                    R.styleable.SingleButtonItem_sbi_text -> {
+                    R.styleable.FilledSingleButton_sbi_text -> {
                         textView?.text = typedArray.getString(currentAttribute)
                     }
                 }
