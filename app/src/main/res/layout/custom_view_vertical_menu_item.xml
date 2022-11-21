@@ -4,7 +4,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_vertical_menu_item"
+    android:background="@drawable/bg_curve_level2_with_ripple_effect"
     android:clickable="true"
     android:focusable="true">
 

@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_home_status_layout">
+        android:background="@drawable/bg_curve_level2_without_ripple_effect">
 
         <TextView
             android:id="@+id/tv_total_game_count"
