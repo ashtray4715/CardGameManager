@@ -17,4 +17,18 @@
         <attr name="actionbar_menu_item_icon" format="reference" />
         <attr name="actionbar_menu_item_visibility" format="boolean" />
     </declare-styleable>
+    <declare-styleable name="BasicInputField">
+        <attr name="bif_title" format="string" />
+        <attr name="bif_title_visibility" format="boolean" />
+        <attr name="bif_text" format="string" />
+        <attr name="bif_hint" format="string" />
+        <attr name="bif_image" format="reference" />
+        <attr name="bif_image_visibility" format="boolean" />
+        <attr name="bif_input_type" format="enum">
+            <enum name="TEXT" value="0" />
+            <enum name="ONLY_POSITIVE_NUMBER" value="1" />
+            <enum name="ALL_KIND_OF_NUMBERS" value="2" />
+            <enum name="ERROR" value="3" />
+        </attr>
+    </declare-styleable>
 </resources>
