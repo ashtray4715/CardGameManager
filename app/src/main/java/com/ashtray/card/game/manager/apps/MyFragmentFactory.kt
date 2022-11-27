@@ -2,6 +2,7 @@ package com.ashtray.card.game.manager.apps
 
 import com.ashtray.card.game.manager.features.hazari.AddHazariGameFragment
 import com.ashtray.card.game.manager.features.home.HomeScreenFragment
+import com.ashtray.card.game.manager.features.ninecard.AddNineCardGameFragment
 import com.ashtray.card.game.manager.features.splash.SplashScreenFragment
 
 class MyFragmentFactory {
@@ -11,4 +12,6 @@ class MyFragmentFactory {
     fun getHomeScreenFragment() = HomeScreenFragment()
 
     fun getAddHazariGameFragment() = AddHazariGameFragment()
+
+    fun getAddNineCardGameFragment() = AddNineCardGameFragment()
 }

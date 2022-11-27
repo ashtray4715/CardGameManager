@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.apps.MyApp
+import com.ashtray.card.game.manager.apps.MyLog
 import com.ashtray.card.game.manager.apps.MyViewModelFactory
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentHomeScreenBinding
@@ -46,31 +47,35 @@ class HomeScreenFragment : BaseFragment() {
             }
         }
 
-        binding.mainOptions.hearts.setOnClickListener {
+        binding.mainOptions.hearts.setCustomClickListener {
             lifecycleScope.launch {
 
             }
         }
 
-        binding.mainOptions.nineCard.setOnClickListener {
+        binding.mainOptions.nineCard.setCustomClickListener {
+            MyLog.i(TAG, "nine card game option clicked")
+            lifecycleScope.launch {
+                changeFragment(
+                    fragment = MyApp.fragmentFactory.getAddNineCardGameFragment(),
+                    transactionType = TransactionType.ADD_FRAGMENT
+                )
+            }
+        }
+
+        binding.mainOptions.twentyNine.setCustomClickListener {
             lifecycleScope.launch {
 
             }
         }
 
-        binding.mainOptions.twentyNine.setOnClickListener {
+        binding.mainOptions.spades.setCustomClickListener {
             lifecycleScope.launch {
 
             }
         }
 
-        binding.mainOptions.spades.setOnClickListener {
-            lifecycleScope.launch {
-
-            }
-        }
-
-        binding.mainOptions.biciKata.setOnClickListener {
+        binding.mainOptions.biciKata.setCustomClickListener {
             lifecycleScope.launch {
 
             }

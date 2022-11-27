@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ashtray.card.game.manager.features.ninecard.AddNineCardGameViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_background1"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.ashtray.card.game.manager.common.ui.base.BaseActionBar
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:actionbar_back_btn_visibility="true"
+            app:actionbar_menu_item_visibility="false"
+            app:actionbar_title="Add 9 card game" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/action_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/game_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:bif_hint="Enter game name"
+                    app:bif_image="@drawable/icon_game_name"
+                    app:bif_title="Game name ?" />
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/player_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:bif_hint="Enter target score"
+                    app:bif_image="@drawable/icon_money"
+                    app:bif_text="100"
+                    app:bif_title="Initial money for each player ?" />
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/round_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:bif_hint="Enter target score"
+                    app:bif_image="@drawable/icon_money"
+                    app:bif_text="10"
+                    app:bif_title="Round fee for each player ?" />
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/player_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:bif_hint="Enter player name 1"
+                    app:bif_image="@drawable/icon_person"
+                    app:bif_title="Player name ?"
+                    app:bif_title_visibility="true" />
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/player_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:bif_hint="Enter player name 2"
+                    app:bif_image="@drawable/icon_person"
+                    app:bif_title_visibility="false" />
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/player_name3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:bif_hint="Enter player name 3"
+                    app:bif_image="@drawable/icon_person"
+                    app:bif_title_visibility="false" />
+
+                <com.ashtray.card.game.manager.common.ui.custom.BasicInputField
+                    android:id="@+id/player_name4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:bif_hint="Enter player name 4"
+                    app:bif_image="@drawable/icon_person"
+                    app:bif_title_visibility="false" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/fragment_background3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <com.ashtray.card.game.manager.common.ui.custom.FilledSingleButton
+                        android:id="@+id/save_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        app:fsb_text="Save" />
+
+                    <com.ashtray.card.game.manager.common.ui.custom.StrokedSingleButton
+                        android:id="@+id/cancel_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        app:ssb_text="Cancel" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</layout>
