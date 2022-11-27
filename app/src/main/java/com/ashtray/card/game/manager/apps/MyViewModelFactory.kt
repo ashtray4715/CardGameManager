@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.ashtray.card.game.manager.features.hazari.AddHazariGameViewModel
 import com.ashtray.card.game.manager.features.home.HomeViewModel
+import com.ashtray.card.game.manager.features.splash.SplashScreenViewModel
 
 @Suppress("UNCHECKED_CAST")
 class MyViewModelFactory(
@@ -13,6 +14,7 @@ class MyViewModelFactory(
         return when (modelClass) {
             AddHazariGameViewModel::class.java -> AddHazariGameViewModel(repository) as T
             HomeViewModel::class.java -> HomeViewModel(repository) as T
+            SplashScreenViewModel::class.java -> SplashScreenViewModel(repository) as T
             else -> throw IllegalArgumentException("viewmodel class not found")
         }
     }

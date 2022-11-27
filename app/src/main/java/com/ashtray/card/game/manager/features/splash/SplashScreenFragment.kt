@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.ashtray.card.game.manager.apps.MyApp
+import com.ashtray.card.game.manager.apps.MyViewModelFactory
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentSplashScreenBinding
 
@@ -16,7 +17,7 @@ import com.ashtray.card.game.manager.databinding.FragmentSplashScreenBinding
 class SplashScreenFragment : BaseFragment() {
 
     private val viewModel: SplashScreenViewModel by viewModels {
-        SplashScreenVMFactory(MyApp.repository)
+        MyViewModelFactory(MyApp.repository)
     }
 
     private var _binding: FragmentSplashScreenBinding? = null
