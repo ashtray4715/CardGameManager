@@ -20,7 +20,7 @@
             android:id="@+id/action_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:actionbar_back_btn_visibility="false"
+            app:actionbar_back_btn_visibility="true"
             app:actionbar_menu_item_visibility="false"
             app:actionbar_title="Add Hazari game" />
 

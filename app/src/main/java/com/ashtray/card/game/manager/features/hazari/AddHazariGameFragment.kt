@@ -37,4 +37,10 @@ class AddHazariGameFragment : BaseFragment() {
         return true
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.actionBar.setBackListener { handleBackButtonPressed() }
+    }
+
 }
