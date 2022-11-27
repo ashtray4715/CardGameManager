@@ -26,38 +26,6 @@
 
         </activity>
 
-        <activity
-            android:name=".features.twentynine.TwentyNineActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.spades.SpadesActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.ninecard.NineCardActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.hearts.HeartsActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.hazari.HazariActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.bnr.RestoreActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.bnr.BackupActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".features.home.HomeScreenFragment"
-            android:exported="false" />
-
     </application>
 
 </manifest>
