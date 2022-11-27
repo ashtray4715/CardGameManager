@@ -41,6 +41,11 @@ class AddHazariGameFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.actionBar.setBackListener { handleBackButtonPressed() }
+        binding.cancelButton.setCustomClickListener { handleBackButtonPressed() }
+        binding.saveButton.setCustomClickListener { saveButtonPressed() }
     }
 
+    private fun saveButtonPressed() {
+
+    }
 }
