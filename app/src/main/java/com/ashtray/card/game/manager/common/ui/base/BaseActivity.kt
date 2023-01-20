@@ -8,13 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.R
-import com.ashtray.card.game.manager.apps.MyApp
 import com.ashtray.card.game.manager.apps.MyLog.i
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment.TransactionType
 import com.ashtray.card.game.manager.common.helpers.SafeRunner
+import com.ashtray.card.game.manager.features.splash.SplashScreenFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,7 +35,7 @@ class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
         setContentView(R.layout.activity_base_layout)
         onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
         changeFragment(
-            fragment = MyApp.fragmentFactory.getSplashScreenFragment(),
+            fragment = SplashScreenFragment(),
             transactionType = TransactionType.SINGLE_FRAGMENT
         )
     }

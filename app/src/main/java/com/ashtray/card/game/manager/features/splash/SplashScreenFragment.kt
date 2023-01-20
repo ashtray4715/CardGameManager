@@ -8,9 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.ashtray.card.game.manager.apps.MyApp
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentSplashScreenBinding
+import com.ashtray.card.game.manager.features.home.HomeScreenFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -42,7 +42,7 @@ class SplashScreenFragment : BaseFragment() {
         handler.removeCallbacksAndMessages(null)
         handler.postDelayed({
             changeFragment(
-                fragment = MyApp.fragmentFactory.getHomeScreenFragment(),
+                fragment = HomeScreenFragment(),
                 transactionType = TransactionType.SINGLE_FRAGMENT
             )
         }, 2000)

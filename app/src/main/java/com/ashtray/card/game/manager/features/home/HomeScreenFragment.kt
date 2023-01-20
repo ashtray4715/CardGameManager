@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.ashtray.card.game.manager.apps.MyApp
 import com.ashtray.card.game.manager.apps.MyLog
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentHomeScreenBinding
+import com.ashtray.card.game.manager.features.hazari.AddHazariGameFragment
+import com.ashtray.card.game.manager.features.ninecard.AddNineCardGameFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -40,7 +41,7 @@ class HomeScreenFragment : BaseFragment() {
         binding.mainOptions.hazari.setCustomClickListener {
             lifecycleScope.launch {
                 changeFragment(
-                    fragment = MyApp.fragmentFactory.getAddHazariGameFragment(),
+                    fragment = AddHazariGameFragment(),
                     transactionType = TransactionType.ADD_FRAGMENT
                 )
             }
@@ -56,7 +57,7 @@ class HomeScreenFragment : BaseFragment() {
             MyLog.i(TAG, "nine card game option clicked")
             lifecycleScope.launch {
                 changeFragment(
-                    fragment = MyApp.fragmentFactory.getAddNineCardGameFragment(),
+                    fragment = AddNineCardGameFragment(),
                     transactionType = TransactionType.ADD_FRAGMENT
                 )
             }
