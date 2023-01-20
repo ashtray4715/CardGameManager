@@ -9,16 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.ashtray.card.game.manager.apps.MyApp
-import com.ashtray.card.game.manager.apps.MyViewModelFactory
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentSplashScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 @SuppressLint("CustomSplashScreen")
 class SplashScreenFragment : BaseFragment() {
 
-    private val viewModel: SplashScreenViewModel by viewModels {
-        MyViewModelFactory(MyApp.repository)
-    }
+    private val viewModel: SplashScreenViewModel by viewModels()
 
     private var _binding: FragmentSplashScreenBinding? = null
     private val binding get() = _binding!!

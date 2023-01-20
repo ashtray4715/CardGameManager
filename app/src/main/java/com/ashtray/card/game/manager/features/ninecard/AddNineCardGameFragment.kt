@@ -5,19 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.ashtray.card.game.manager.apps.MyApp
-import com.ashtray.card.game.manager.apps.MyViewModelFactory
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentAddNineCardGameBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddNineCardGameFragment : BaseFragment() {
 
     private var _binding: FragmentAddNineCardGameBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: AddNineCardGameViewModel by viewModels {
-        MyViewModelFactory(MyApp.repository)
-    }
+    private val viewModel: AddNineCardGameViewModel by viewModels()
 
     override val mTAG = "AddNineCardGameFragment"
 

@@ -8,19 +8,18 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.apps.MyApp
 import com.ashtray.card.game.manager.apps.MyLog
-import com.ashtray.card.game.manager.apps.MyViewModelFactory
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.databinding.FragmentHomeScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class HomeScreenFragment : BaseFragment() {
 
     private var _binding: FragmentHomeScreenBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: HomeViewModel by viewModels {
-        MyViewModelFactory(MyApp.repository)
-    }
+    private val viewModel: HomeViewModel by viewModels()
 
     override val mTAG = "HomeScreenFragment"
 

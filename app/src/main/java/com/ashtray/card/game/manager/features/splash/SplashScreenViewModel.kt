@@ -2,7 +2,10 @@ package com.ashtray.card.game.manager.features.splash
 
 import androidx.lifecycle.ViewModel
 import com.ashtray.card.game.manager.apps.MyRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class SplashScreenViewModel(repository: MyRepository) : ViewModel() {
+@HiltViewModel
+class SplashScreenViewModel @Inject constructor(repository: MyRepository) : ViewModel() {
 
 }

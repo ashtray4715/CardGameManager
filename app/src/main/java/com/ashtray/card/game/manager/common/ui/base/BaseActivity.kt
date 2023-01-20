@@ -15,7 +15,9 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment.TransactionType
 import com.ashtray.card.game.manager.common.helpers.SafeRunner
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class BaseActivity : AppCompatActivity(), BaseFragment.CallBacks {
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
