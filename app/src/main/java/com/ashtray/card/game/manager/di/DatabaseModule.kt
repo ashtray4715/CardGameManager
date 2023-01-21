@@ -1,6 +1,7 @@
 package com.ashtray.card.game.manager.di
 
 import android.content.Context
+import androidx.room.Room
 import com.ashtray.card.game.manager.database.main.AppDB
 import com.ashtray.card.game.manager.database.main.AppDao
 import dagger.Module
@@ -16,7 +17,7 @@ class DatabaseModule {
     @Singleton
     @Provides
     fun provideAppDB(@ApplicationContext context: Context): AppDB {
-        return AppDB.getInstance(context)
+        return Room.databaseBuilder(context, AppDB::class.java, AppDB.DATABASE_NAME).build()
     }
 
     @Provides
