@@ -8,7 +8,7 @@ import com.ashtray.card.game.manager.database.entities.HazariGameInfo
 @Dao
 interface AppDao {
     @Insert
-    suspend fun insertHazariGame(game: HazariGameInfo)
+    suspend fun insertNewHazariGame(game: HazariGameInfo)
 
     @Query("SELECT * FROM hazari_game_info")
     fun getAllTheHazariGame(): List<HazariGameInfo>
