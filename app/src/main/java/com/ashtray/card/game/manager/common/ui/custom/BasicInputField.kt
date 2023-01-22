@@ -68,8 +68,11 @@ class BasicInputField(context: Context, attrs: AttributeSet) : RelativeLayout(co
         }
     }
 
+    fun getInputText(): String {
+        return etInputField?.text.toString()
+    }
+
     companion object {
         private const val TAG = "VerticalMenuItem"
     }
-
 }

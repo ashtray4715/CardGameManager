@@ -7,7 +7,7 @@ import javax.inject.Singleton
 
 @Singleton
 class MyRepository @Inject constructor(private val appDao: AppDao) {
-    suspend fun insertNewHazariGame(game: HazariGameInfo) {
-        appDao.insertNewHazariGame(game)
+    suspend fun insertNewHazariGame(game: HazariGameInfo): Long {
+        return appDao.insertNewHazariGame(game)
     }
 }

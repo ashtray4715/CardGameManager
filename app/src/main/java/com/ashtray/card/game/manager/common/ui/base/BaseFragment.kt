@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.ashtray.card.game.manager.apps.MyLog.e
+import com.ashtray.card.game.manager.common.helpers.SafeRunner
 
 abstract class BaseFragment : Fragment() {
 
@@ -50,19 +50,16 @@ abstract class BaseFragment : Fragment() {
         callBacks?.changeFragment(fragment, transactionType)
     }
 
-    protected fun showToastMessage(message: String) {
-        callBacks?.showToastMessage(message)
+    protected fun showToastMessage(message: String?) {
+        message?.let { callBacks?.showToastMessage(it) }
     }
 
     protected fun hideSystemKeyboardIfPossible() {
-        try {
+        SafeRunner {
             val wToken = activity?.currentFocus?.windowToken
             val service = context?.getSystemService(Context.INPUT_METHOD_SERVICE)
             val immService = service as InputMethodManager?
             immService?.hideSoftInputFromWindow(wToken, 0)
-        } catch (e: Exception) {
-            e(mTAG, "hideSystemKeyboardIfPossible: exception occurs $e")
-            e.printStackTrace()
         }
     }
 }
