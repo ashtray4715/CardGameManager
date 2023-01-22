@@ -1,6 +1,7 @@
 package com.ashtray.card.game.manager.apps
 
 import android.os.Bundle
+import com.ashtray.card.game.manager.features.hazari.HazariGameListFragment
 import com.ashtray.card.game.manager.features.hazari.PlayHazariGameFragment
 
 object MyFactory {
@@ -11,4 +12,6 @@ object MyFactory {
             }
         }
     }
+
+    fun getHazariGameListFragment() = HazariGameListFragment()
 }
