@@ -1,40 +1,32 @@
 package com.ashtray.card.game.manager.common.helpers
 
-import com.ashtray.card.game.manager.apps.MyConst
+import android.text.InputFilter
+import android.text.Spanned
 
-object CustomInputFilter {
-    fun checkGameName(gameName: String): String {
-        if (gameName.length < MyConst.GAME_NAME_MINIMUM_LENGTH) {
-            throw Exception("Game name minimum length is ${MyConst.GAME_NAME_MINIMUM_LENGTH}")
-        }
-        if (gameName.length > MyConst.GAME_NAME_MAXIMUM_LENGTH) {
-            throw Exception("Game name maximum length is ${MyConst.GAME_NAME_MAXIMUM_LENGTH}")
-        }
-        return gameName
-    }
+class CustomInputFilter {
 
-    fun checkHazariGameFinalScore(score: String): Int {
-        if (score.isEmpty()) {
-            throw Exception("Final score can not be empty")
-        }
-        for (ch in score.toCharArray()) {
-            if (ch < '0' || '9' < ch) {
-                throw Exception("Only 0 ~ 9 accepted")
+    fun getPositiveNumberInputFilter(): InputFilter {
+        return object : InputFilter {
+            override fun filter(
+                string: CharSequence,
+                start: Int,
+                end: Int,
+                spanned: Spanned?,
+                dStart: Int,
+                dEnd: Int
+            ): CharSequence? {
+                for (i in start until end) {
+                    if (string[i] in '0'..'9') {
+                        continue
+                    }
+                    return ""
+                }
+                return null
             }
         }
-        return score.toInt()
     }
 
-    fun checkPlayerName(name: String): String {
-        if (name.isEmpty()) {
-            throw Exception("Player name can not be empty")
-        }
-        if (name.length < MyConst.PLAYER_NAME_MINIMUM_LENGTH) {
-            throw Exception("Player name minimum length is ${MyConst.PLAYER_NAME_MINIMUM_LENGTH}")
-        }
-        if (name.length > MyConst.PLAYER_NAME_MAXIMUM_LENGTH) {
-            throw Exception("Player name maximum length is ${MyConst.PLAYER_NAME_MAXIMUM_LENGTH}")
-        }
-        return name
+    fun getInputLengthFilter(maxLen: Int): InputFilter {
+        return InputFilter.LengthFilter(maxLen)
     }
 }

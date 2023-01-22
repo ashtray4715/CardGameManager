@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.ashtray.card.game.manager.apps.MyFactory
-import com.ashtray.card.game.manager.common.helpers.CustomInputFilter
+import com.ashtray.card.game.manager.common.helpers.InputChecker
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.database.entities.HazariGameInfo
 import com.ashtray.card.game.manager.databinding.FragmentAddHazariGameBinding
@@ -56,7 +56,7 @@ class AddHazariGameFragment : BaseFragment() {
 
 
         val gameName = try {
-            CustomInputFilter.checkGameName(binding.gameNameField.getInputText())
+            InputChecker.checkGameName(binding.gameNameField.getInputText())
         } catch (e: Exception) {
             showToastMessage(e.message)
             return@launch
@@ -65,35 +65,35 @@ class AddHazariGameFragment : BaseFragment() {
         val creationTime = System.currentTimeMillis()
 
         val finalScore = try {
-            CustomInputFilter.checkHazariGameFinalScore(binding.targetScoreField.getInputText())
+            InputChecker.checkHazariGameFinalScore(binding.targetScoreField.getInputText())
         } catch (e: Exception) {
             showToastMessage(e.message)
             return@launch
         }
 
         val playerName1 = try {
-            CustomInputFilter.checkPlayerName(binding.playerNameField1.getInputText())
+            InputChecker.checkPlayerName(binding.playerNameField1.getInputText())
         } catch (e: Exception) {
             showToastMessage(e.message)
             return@launch
         }
 
         val playerName2 = try {
-            CustomInputFilter.checkPlayerName(binding.playerNameField2.getInputText())
+            InputChecker.checkPlayerName(binding.playerNameField2.getInputText())
         } catch (e: Exception) {
             showToastMessage(e.message)
             return@launch
         }
 
         val playerName3 = try {
-            CustomInputFilter.checkPlayerName(binding.playerNameField3.getInputText())
+            InputChecker.checkPlayerName(binding.playerNameField3.getInputText())
         } catch (e: Exception) {
             showToastMessage(e.message)
             return@launch
         }
 
         val playerName4 = try {
-            CustomInputFilter.checkPlayerName(binding.playerNameField4.getInputText())
+            InputChecker.checkPlayerName(binding.playerNameField4.getInputText())
         } catch (e: Exception) {
             showToastMessage(e.message)
             return@launch
