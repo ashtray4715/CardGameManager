@@ -5,13 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.ashtray.card.game.manager.apps.MyFactory
 import com.ashtray.card.game.manager.common.helpers.InputChecker
 import com.ashtray.card.game.manager.common.ui.base.BaseFragment
 import com.ashtray.card.game.manager.database.entities.HazariGameInfo
 import com.ashtray.card.game.manager.databinding.FragmentAddHazariGameBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -51,10 +49,6 @@ class AddHazariGameFragment : BaseFragment() {
     }
 
     private fun saveButtonPressed() = mCustomViewScope?.launch {
-        hideSystemKeyboardIfPossible()
-        delay(200)
-
-
         val gameName = try {
             InputChecker.checkGameName(binding.gameNameField.getInputText())
         } catch (e: Exception) {
@@ -121,13 +115,7 @@ class AddHazariGameFragment : BaseFragment() {
 
     private fun handleGameInsertionUpdate(gameId: Long) = mCustomViewScope?.launch {
         if (gameId != -1L) {
-            delay(100)
-            showToastMessage("New hazari game created")
-            changeFragment(
-                fragment = MyFactory.getPlayHazariGameFragment(gameId),
-                transactionType = TransactionType.ADD_FRAGMENT
-            )
-            delay(100)
+            hideSystemKeyboardIfPossible()
             changeFragment(
                 fragment = this@AddHazariGameFragment,
                 transactionType = TransactionType.REMOVE_FRAGMENT
