@@ -4,6 +4,9 @@ import com.ashtray.card.game.manager.apps.MyConst
 
 object InputChecker {
     fun checkGameName(gameName: String): String {
+        if(gameName.isEmpty()) {
+            throw Exception("Can not be empty")
+        }
         if (gameName.length < MyConst.GAME_NAME_MINIMUM_LENGTH) {
             throw Exception("Minimum length is ${MyConst.GAME_NAME_MINIMUM_LENGTH}")
         }

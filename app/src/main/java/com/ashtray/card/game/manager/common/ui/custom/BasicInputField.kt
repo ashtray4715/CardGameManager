@@ -2,27 +2,48 @@ package com.ashtray.card.game.manager.common.ui.custom
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.text.Editable
 import android.text.InputFilter
 import android.text.InputType
+import android.text.TextWatcher
 import android.util.AttributeSet
+import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.ashtray.card.game.manager.R
-import com.ashtray.card.game.manager.apps.MyLog
 import com.ashtray.card.game.manager.common.helpers.CustomInputFilter
+import com.ashtray.card.game.manager.common.helpers.SafeRunner
 
 class BasicInputField(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
 
     private var tvTitle: TextView? = null
     private var ivIcon: ImageView? = null
     private var etInputField: EditText? = null
+    private var tvErrorMsg: TextView? = null
+
+    private val textChangeListener = object : TextWatcher {
+        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            // nothing to do
+        }
+
+        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            // nothing to do
+        }
+
+        override fun afterTextChanged(p0: Editable?) {
+            if (tvErrorMsg?.visibility == View.VISIBLE) {
+                tvErrorMsg?.visibility = View.INVISIBLE
+            }
+        }
+    }
 
     init {
         setViewAndInitializeComponents(context)
         drawComponentsForTheFirstTime(context, attrs)
+        addListenersAndHandlers()
     }
 
     private fun setViewAndInitializeComponents(context: Context) {
@@ -30,12 +51,13 @@ class BasicInputField(context: Context, attrs: AttributeSet) : RelativeLayout(co
         tvTitle = cView.findViewById(R.id.text_view)
         ivIcon = cView.findViewById(R.id.image_view)
         etInputField = cView.findViewById(R.id.edit_text)
+        tvErrorMsg = cView.findViewById(R.id.tv_error_message)
     }
 
     @SuppressLint("NonConstantResourceId")
     private fun drawComponentsForTheFirstTime(context: Context, attrs: AttributeSet) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.BasicInputField)
-        try {
+        SafeRunner {
             val paramCount = typedArray.indexCount
             for (i in 0 until paramCount) {
                 when (val currentAttribute = typedArray.getIndex(i)) {
@@ -70,12 +92,12 @@ class BasicInputField(context: Context, attrs: AttributeSet) : RelativeLayout(co
                     }
                 }
             }
-        } catch (e: Exception) {
-            MyLog.e(TAG, "drawComponentsForTheFirstTime: problem occurs")
-            e.printStackTrace()
-        } finally {
-            typedArray.recycle()
         }
+        typedArray.recycle()
+    }
+
+    private fun addListenersAndHandlers() {
+        etInputField?.addTextChangedListener(textChangeListener)
     }
 
     private fun addInputFilter(filter: InputFilter) {
@@ -103,7 +125,11 @@ class BasicInputField(context: Context, attrs: AttributeSet) : RelativeLayout(co
         return etInputField?.text.toString()
     }
 
-    companion object {
-        private const val TAG = "VerticalMenuItem"
+    fun setErrorMessage(message: String?) {
+        message?.let {
+            tvErrorMsg?.text = it
+            tvErrorMsg?.visibility = View.VISIBLE
+            etInputField?.requestFocus()
+        }
     }
 }

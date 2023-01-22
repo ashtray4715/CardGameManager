@@ -58,7 +58,8 @@ class AddHazariGameFragment : BaseFragment() {
         val gameName = try {
             InputChecker.checkGameName(binding.gameNameField.getInputText())
         } catch (e: Exception) {
-            showToastMessage(e.message)
+            binding.gameNameField.setErrorMessage(e.message)
+            scrollToView(binding.scrollView, binding.gameNameField)
             return@launch
         }
 
@@ -67,35 +68,40 @@ class AddHazariGameFragment : BaseFragment() {
         val finalScore = try {
             InputChecker.checkHazariGameFinalScore(binding.targetScoreField.getInputText())
         } catch (e: Exception) {
-            showToastMessage(e.message)
+            binding.targetScoreField.setErrorMessage(e.message)
+            scrollToView(binding.scrollView, binding.targetScoreField)
             return@launch
         }
 
         val playerName1 = try {
             InputChecker.checkPlayerName(binding.playerNameField1.getInputText())
         } catch (e: Exception) {
-            showToastMessage(e.message)
+            binding.playerNameField1.setErrorMessage(e.message)
+            scrollToView(binding.scrollView, binding.playerNameField1)
             return@launch
         }
 
         val playerName2 = try {
             InputChecker.checkPlayerName(binding.playerNameField2.getInputText())
         } catch (e: Exception) {
-            showToastMessage(e.message)
+            binding.playerNameField2.setErrorMessage(e.message)
+            scrollToView(binding.scrollView, binding.playerNameField2)
             return@launch
         }
 
         val playerName3 = try {
             InputChecker.checkPlayerName(binding.playerNameField3.getInputText())
         } catch (e: Exception) {
-            showToastMessage(e.message)
+            binding.playerNameField3.setErrorMessage(e.message)
+            scrollToView(binding.scrollView, binding.playerNameField3)
             return@launch
         }
 
         val playerName4 = try {
             InputChecker.checkPlayerName(binding.playerNameField4.getInputText())
         } catch (e: Exception) {
-            showToastMessage(e.message)
+            binding.playerNameField4.setErrorMessage(e.message)
+            scrollToView(binding.scrollView, binding.playerNameField4)
             return@launch
         }
 

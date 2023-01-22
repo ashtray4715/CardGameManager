@@ -1,7 +1,12 @@
 package com.ashtray.card.game.manager.common.ui.base
 
 import android.content.Context
+import android.graphics.Point
+import android.view.View
+import android.view.ViewGroup
+import android.view.ViewParent
 import android.view.inputmethod.InputMethodManager
+import android.widget.ScrollView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.ashtray.card.game.manager.common.helpers.SafeRunner
@@ -61,5 +66,26 @@ abstract class BaseFragment : Fragment() {
             val immService = service as InputMethodManager?
             immService?.hideSoftInputFromWindow(wToken, 0)
         }
+    }
+
+    protected fun scrollToView(scrollViewParent: ScrollView, view: View) {
+        val childOffset = Point()
+        getDeepChildOffset(scrollViewParent, view.parent, view, childOffset)
+        scrollViewParent.smoothScrollTo(0, childOffset.y)
+    }
+
+    private fun getDeepChildOffset(
+        mainParent: ViewGroup,
+        parent: ViewParent,
+        child: View,
+        accumulatedOffset: Point
+    ) {
+        val parentGroup = parent as ViewGroup
+        accumulatedOffset.x += child.left
+        accumulatedOffset.y += child.top
+        if (parentGroup == mainParent) {
+            return
+        }
+        getDeepChildOffset(mainParent, parentGroup.parent, parentGroup, accumulatedOffset)
     }
 }
